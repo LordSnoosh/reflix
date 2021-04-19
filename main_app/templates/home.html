@@ -1,23 +1,49 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reflix</title>
+    <title>Space</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-
 <body>
-    <form action="/signup/" method="post">
-        {% csrf_token %}
-        <input name='name' placeholder="name">
-        <input name='email' placeholder="email" type="email">
-        <input type="submit" class="btn" value="Submit">
-    </form>
-    {% if message %}
-        <div> {{message}} </div>
-    {% endif %}
+    <header class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+        <ul>
+            <li><a href="/" class="left brand-logo">&nbsp;&nbsp;SpaceCrafts</a></li>
+        </ul>
+        <ul class="right">
+        </ul>
+        </div>
+    </nav>
+    </header>
+    
+    
+<body>
+    <div id="c1">
+        <form action="/signup/" method="post">
+            {% csrf_token %}
+            <input name='name' placeholder="name">
+            <input name='email' placeholder="email" type="email">
+            <input type="submit" class="btn" value="Submit">
+        </form>
+        {% if message %}
+            <div> {{message}} </div>
+        {% endif %}
+    </div>
+    <div id="c2"></div>
+    <div id="c3"></div>
 </body>
+<footer class="page-footer">
+    <div class="right">All Rights Reserved, &copy; 2021 SpaceCrafts &nbsp;</div>
+  </footer>
+
+
 
 </html>
