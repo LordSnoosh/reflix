@@ -1,27 +1,56 @@
 body{
     margin: 0;
 }
+
 .navbar-fixed{
     height: 72px;
 }
-.nav-wrapper{
+
+nav, .page-footer{
     height: 72px;
 }
+
 #c1{
     height: 346px;
     background-color: pink;
 }
+
 #c2{
     height: 272px;
-    background-color:  blue;
-    
+    background-color:  blue;    
 }
 
 #c3{
     height: 272px;
     background-color: red;
+}
+
+@media only screen and (min-width: 769px) {
     
+    .navbar-fixed{
+        height: 115px;
+    }
+    
+    nav, .page-footer{
+        height: 115px;
+        
+    }
+    
+    #c1{
+        height: 418px;
+        background-color: pink;
+        margin:0;
+    }
+    
+    #c2{
+        height: 311px;
+        background-color:  blue;    
+    }
+    
+    #c3{
+        height: 311px;
+        background-color: red;
+    }
+
 }
-.page-footer{
-    height: 72px;
-}
+
