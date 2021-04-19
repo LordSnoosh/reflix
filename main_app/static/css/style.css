@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+.navbar-fixed{
+    height: 72px;
+}
+.nav-wrapper{
+    height: 72px;
+}
+#c1{
+    height: 346px;
+    background-color: pink;
+}
+#c2{
+    height: 272px;
+    background-color:  blue;
+    
+}
+
+#c3{
+    height: 272px;
+    background-color: red;
+    
+}
+.page-footer{
+    height: 72px;
+}
