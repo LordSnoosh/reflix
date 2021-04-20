@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'NetflixBlack';
+  src: local('NetflixBlack'),
+       url('../fonts/NetflixSansBlack.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NetflixBold';
+  src: local('NetflixBold'),
+       url('../fonts/NetflixSansBold.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NetflixIcon';
+  src: local('NetflixIcon'),
+       url('../fonts/NetflixSansIcon.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NetflixLight';
+  src: local('NetflixLight'),
+       url('../fonts/NetflixSansLight.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NetflixMedium';
+  src: local('NetflixMedium'),
+       url('../fonts/NetflixSansMedium.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NetflixRegular';
+  src: local('NetflixRegular'),
+       url('../fonts/NetflixSansRegular.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NetflixThin';
+  src: local('NetflixThin'),
+       url('../fonts/NetflixSansThin.ttf') format("truetype");
+}
