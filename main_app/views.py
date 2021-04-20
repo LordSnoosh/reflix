@@ -9,10 +9,10 @@ def home(request):
 
 def signup(request):
     if User.objects.filter(email = request.POST['email']):
-        message = 'email already used'
+        message = 'You are already signed up.'
         return render(request, 'home.html', { 'message' : message })
     User.objects.create( name = request.POST['name'], email = request.POST['email'])
-    message = 'thanks for signing up'
+    message = 'Thank you for signing up.'
     return render(request, 'home.html', { 'message' : message })
 
 def dashboard(request):

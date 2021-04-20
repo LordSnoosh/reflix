@@ -52,15 +52,28 @@ nav, .page-footer, .navbar-fixed{
     background-color: black;
 }
 
-.page-footer{
-    margin-top: 1px;
+footer {
+    height: 107px;
 }
 
-.page-footer > div{
-    margin-top: 4px;
-    text-align: center;
+.page-footer{
+    margin-top: 1px;
+    padding: 3px 16px 0px 16px;
+    height: 107px;
+}
+
+#small_footer{
     font-family: NetflixLight;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+#small_footer > div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    color: #F3F3F3;
 }
 
 #c1 {
@@ -76,8 +89,12 @@ nav, .page-footer, .navbar-fixed{
     height: 338px;
     background-color: black;   
     padding: 16px; 
+    display: block;
 }
 
+#c2c2, #c3c3 {
+    display: none;
+}
 
 #search_icon, #menu_icon {
     font-size: 40px;
@@ -98,16 +115,17 @@ nav {
 #form > input {
     display: block;
     margin-left: 16px;
-    background-color: white;
+    background-color:#F3F3F3;
     border-radius: 20px;
     width: 297px;
+    padding-left: 15px;
 }
 
 .label {
     margin: 10px 0px 0px 32px;
     font-size: 16px;
     font-family: NetflixLight;
-    color: white
+    color:#F3F3F3
 }
 
 #blurb {
@@ -115,15 +133,32 @@ nav {
     margin: 0px 16px 0px 16px;
     padding-top: 40px;
     font-family: NetflixLight;
-    color: white;
+    color:#F3F3F3;
 }
 
-#form > button {
+.small_submit{
+    display:block;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.large_submit{
+    display:none;
+}
+
+#submit_message {
+        color:#F3F3F3;
+        font-family: NetflixRegular;
+        margin-left: 12px;
+    }
+
+.small_submit > button {
     border-radius: 20px;
     background-color: #E90914;
-    color: white;
+    color:#F3F3F3;
     width: 88px;
-    margin-top: 16px;
     font-family: NetflixRegular;
     text-align: center;
     font-size: 18px;
@@ -133,7 +168,7 @@ nav {
 }
 
 .carousel_text {
-    color: white;
+    color:#F3F3F3;
     font-size: 16px;
     font-family: NetflixLight;
     margin-bottom: 16px;
@@ -148,7 +183,7 @@ nav {
 }
 
 .carousel_info {
-    color: white;
+    color:#F3F3F3;
     font-family: NetflixLight;
 }
 
@@ -161,7 +196,16 @@ nav {
   background:#C4C4C4;
 }
 
+
+#large_footer {
+    display: none;
+}
+
 @media only screen and (min-width: 769px) {
+
+    nav {
+        padding: 28px 128px 0px 128px;
+    }
     
     .navbar-fixed{
         height: 120px;
@@ -175,19 +219,179 @@ nav {
         height: 620px;
         margin:0;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #blurb{
+        width: 645px;
+        font-size: 36px;
+        margin-left: 70px;
+    }
+
+    #button {
+       
     }
     
     #c2, #c3{
-        height: 311px;  
+        display:none; 
     }
 
-    #small {
+    .small_submit{
+        display:block;
+        display: none;
+    }
+
+    .large_submit{
+        display:none;
+        display:block;
+    }   
+
+    .large_submit{
+        margin-top: 16px;
+        display: flex;
+        width: 310px;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .large_submit > button {
+    border-radius: 20px;
+    background-color: #E90914;
+    color:#F3F3F3;
+    width: 88px;
+    font-family: NetflixRegular;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 16px;
+    height: 40px;
+    border:1px solid #E90914; 
+    }
+
+    #submit_message {
+        color:#F3F3F3;
+        font-family: NetflixRegular;
+        margin-bottom: 8px;
+    }
+
+    #c2c2{
+    display: block;
+    height: 425px;
+    background-color: black;
+    }   
+
+
+    .glider-contain {
+        padding: 30px 128px 0px 128px;
+        background-color: black;
+    }
+
+    .glider {
+        margin: 0px 128px 0px 128px;
+    }
+
+     #c3c3{
+        height: 425px;
+        display: block;
+        padding: 18px 128px 0px 128px;
+    }
+
+
+    #glider_text {
+        color:#F3F3F3;
+        font-size: 24px;
+        font-family: NetflixRegular;
+        margin-bottom: 10px;
+    }
+
+    #small_footer {
+        display: none;
+    }
+
+    #large_footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #large_footer > div{
+        margin: 15px 112px 0px 112px;
+        font-size: 24px;
+        font-family: NetflixRegular;
+        color:#F3F3F3;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    #footer_logo {
+        font-size: 36px;
+        font-family: NetflixBold;
+        color: #E90914;
+        margin-top: -12px;
+    }
+
+    #large_footer > #cp {
+        font-size: 16px;
+        font-family: NetflixLight;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+}
+
+@media only screen and (min-width: 1025px){
+     #small {
         display: none;
     }
 
     #large {
         display: inline;
+        padding: 28px 128px 0px 128px;
     }
 
-}
+    #icon_holder {
+        font-size: 24px;
+        font-family: NetflixMedium;
+        color:#F3F3F3;
+    }
 
+    #icon_holder > li{
+        margin-right: 65px;
+    }
+
+    #icon_holder > button{
+        border-radius: 20px;
+        background-color: #E90914;
+        color:#F3F3F3;
+        width: 120px;
+        font-family: NetflixMedium;
+        text-align: center;
+        font-size: 24px;
+        height: 44px;
+        border:1px solid #E90914; 
+    }
+
+    #fake {
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        width: 266px;
+        height: 44px;
+        margin: 10px 0px 0px 30px;
+        padding-bottom: 20px;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding-top: 18px;
+    }
+
+
+    #fake_icon {
+        font-size: 40px;
+        font-weight: 100;
+        color: black;
+    }
+}
