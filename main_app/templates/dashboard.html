@@ -1,36 +1,100 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reflix Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Reflix</title>
 </head>
 
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th> ID </th>
-                <th> Name </th>
-                <th> Email </th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in users %}
-                <tr>
-                    <td> {{ user.id }} </td>
-                    <td> {{ user.name }} </td>
-                    <td> {{ user.email }} </td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <header class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <ul>
+                    <li id="logo">Reflix Admin Dashboard</li>
+                </ul>
+                <ul class="right" id="admin-info">
+                    <!-- display current user's img & name -->
+                    <!-- <li> {{ request.user }} </li> -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div id="side-menu">
+            <ul id="icon_holder" style="list-style-type:none;">
+                <li><i class="material-icons" id="home_icon">home</i>Home</li>
+                <li><i class="material-icons" id="dashboard_icon">dashboard</i>My Dashboard</li>
+                <li><i class="material-icons" id="receipt_icon">receipt</i>Reports</li>
+                <li><i class="material-icons" id="person_icon">person</i>Customers</li>
+                <li><i class="material-icons" id="pie_chart_icon">pie_chart</i>Analytics</li>
+                <li><i class="material-icons" id="trending_up_icon">trending_up</i>Marketing</li>
+                <li><i class="material-icons" id="file_download_icon">file_download</i>Export</li>
+                <li><i class="material-icons" id="settings_icon">settings</i>Settings</li>
+            </ul>
+        </div>
+        <div id="main-section">
+            <!-- calendar & search bar -->
+            <div id="calendar">
+                <i class="material-icons" id="event_icon">event</i>
+                This Week
+            </div>
+            <div id="search-bar"> Search bar
+                <i class="material-icons" id="search_icon">search</i>
+            </div>
+            <!-- charts -->
+            <div class="charts">
+                <img src='https://i.imgur.com/UJSV2YO.png' alt='Bar Graph'>
+                <img src='https://i.imgur.com/jHIY2h7.png' alt='Line Chart Graph'>
+                <img src='https://i.imgur.com/SPcY3Jp.png' alt='Area Graph'>
+            </div>
+            <!-- User Info -->
+            <div id="user-table-container">
+                <table id="user-table">
+                    <thead>
+                        <tr>
+                            <th> Name </th>
+                            <th> Email </th>
+                            <!-- <th> Date of sign up </th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td> {{ user.name }} </td>
+                            <td> {{ user.email }} </td>
+                            <!-- <td> {{ user.date_created }} </td> -->
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 </body>
+<footer class="page-footer">
+    <nav>
+        <div class="nav-wrapper">
+            <ul id="footer-links">
+                <div id="reserved">All Rights Reserved, &copy; 2021 Reflix &nbsp;</div>
+                <li id="footer-logo">Reflix</li>
+                <li>Contact</li>
+                <li>Help</li>
+                <li>Account</li>
+                <li>About</li>
+                <li>Privacy</li>
+                <li>Terms of Use</li>
+            </ul>
+        </div>
+    </nav>
+</footer>
 
 </html>
