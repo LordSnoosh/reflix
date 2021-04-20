@@ -22,8 +22,10 @@
                     <li id="logo">Reflix Admin Dashboard</li>
                 </ul>
                 <ul class="right" id="admin-info">
-                    <!-- display current user's img & name -->
-                    <!-- <li> {{ request.user }} </li> -->
+                    <li id="profile-pic" height="100px"><img
+                            src="https://i.pinimg.com/originals/21/81/f5/2181f5def1d7583fb0eea32613ec98fb.jpg"
+                            height="49px" alt="Avatar with personal photo"></li>
+                    <li id="admin-name">Tom Hanks</li>
                 </ul>
             </div>
         </nav>
@@ -31,70 +33,101 @@
     <section>
         <div id="side-menu">
             <ul id="icon_holder" style="list-style-type:none;">
-                <li><i class="material-icons" id="home_icon">home</i>Home</li>
-                <li><i class="material-icons" id="dashboard_icon">dashboard</i>My Dashboard</li>
-                <li><i class="material-icons" id="receipt_icon">receipt</i>Reports</li>
-                <li><i class="material-icons" id="person_icon">person</i>Customers</li>
-                <li><i class="material-icons" id="pie_chart_icon">pie_chart</i>Analytics</li>
-                <li><i class="material-icons" id="trending_up_icon">trending_up</i>Marketing</li>
-                <li><i class="material-icons" id="file_download_icon">file_download</i>Export</li>
-                <li><i class="material-icons" id="settings_icon">settings</i>Settings</li>
+                <li><i class="material-icons" id="home_icon">home</i>
+                    <p>Home</p>
+                </li>
+                <li><i class="material-icons" id="dashboard_icon">dashboard</i>
+                    <p id="dashboard-menu">My Dashboard</p>
+                </li>
+                <li><i class="material-icons" id="receipt_icon">receipt</i>
+                    <p>Reports</p>
+                </li>
+                <li><i class="material-icons" id="person_icon">person</i>
+                    <p>Customers</p>
+                </li>
+                <li><i class="material-icons" id="pie_chart_icon">pie_chart</i>
+                    <p>Analytics</p>
+                </li>
+                <li><i class="material-icons" id="trending_up_icon">trending_up</i>
+                    <p>Marketing</p>
+                </li>
+                <li><i class="material-icons" id="file_download_icon">file_download</i>
+                    <p>Export</p>
+                </li>
+            </ul>
+            <ul id="icon_holder_2" style="list-style-type:none;">
+                <li><i class="material-icons" id="settings_icon">settings</i>
+                    <p id="settings-menu">Settings</p>
+                </li>
+                <li><i class="material-icons" id="help_icon">help</i>
+                    <p>Help</p>
+                </li>
             </ul>
         </div>
         <div id="main-section">
-            <!-- calendar & search bar -->
-            <div id="calendar">
-                <i class="material-icons" id="event_icon">event</i>
-                This Week
-            </div>
-            <div id="search-bar"> Search bar
+            <div id="search-bar">
+                <input type="text" id="search-box" placeholder="">
                 <i class="material-icons" id="search_icon">search</i>
             </div>
+            <div id="calendar">
+                <i class="material-icons" id="event_icon">event</i>
+                <div>This Week</div>
+            </div>
             <!-- charts -->
-            <div class="charts">
-                <img src='https://i.imgur.com/UJSV2YO.png' alt='Bar Graph'>
-                <img src='https://i.imgur.com/jHIY2h7.png' alt='Line Chart Graph'>
-                <img src='https://i.imgur.com/SPcY3Jp.png' alt='Area Graph'>
+            <div class="row">
+                <div id="bar"><img src='https://i.imgur.com/UJSV2YO.png' alt='Bar Graph' style="width:100%"></div>
+                <div id="line"><img src='https://i.imgur.com/jHIY2h7.png' alt='Line Chart Graph' style="width:100%">
+                </div>
+                <div id="area"><img src='https://i.imgur.com/SPcY3Jp.png' alt='Area Graph' style="width:100%"></div>
             </div>
             <!-- User Info -->
             <div id="user-table-container">
                 <table id="user-table">
                     <thead>
                         <tr>
+                            <th></th>
                             <th> Name </th>
                             <th> Email </th>
-                            <!-- <th> Date of sign up </th> -->
+                            <th> Date of sign up </th>
                         </tr>
                     </thead>
                     <tbody>
+                        <div id="scroll"></div>
                         {% for user in users %}
                         <tr>
+                            <td id="checkbox"><input type="checkbox" class="filled-in" /><img
+                                    src="https://img.icons8.com/ios/452/unchecked-checkbox.png" height="25px"></td>
                             <td> {{ user.name }} </td>
                             <td> {{ user.email }} </td>
-                            <!-- <td> {{ user.date_created }} </td> -->
+                            <td> {{ user.date_created }} </td>
                         </tr>
                         {% endfor %}
-                    </tbody>
-                </table>
+                        <div id="scrollbar"><img src="https://i.imgur.com/6QEYTly.png" height="300px"></div>
             </div>
+            </tbody>
+            </table>
+        </div>
         </div>
     </section>
 </body>
-<footer class="page-footer">
+<footer class="page-footer-2">
     <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper-2">
             <ul id="footer-links">
+                <li id="footer-logo">ReflixAdmin</li>
                 <div id="reserved">All Rights Reserved, &copy; 2021 Reflix &nbsp;</div>
-                <li id="footer-logo">Reflix</li>
-                <li>Contact</li>
-                <li>Help</li>
-                <li>Account</li>
-                <li>About</li>
-                <li>Privacy</li>
-                <li>Terms of Use</li>
             </ul>
         </div>
     </nav>
 </footer>
+<!-- <script>
+    const dateEl = document.getElementById('calendar');
+    M.Datepicker.init(dateEl, {
+      format: 'yyyy-mm-dd',
+      defaultDate: new Date(),
+      setDefaultDate: true,
+      autoClose: true
+    });
+</script> -->
 
 </html>
