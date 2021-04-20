@@ -33,3 +33,81 @@
   src: local('NetflixThin'),
        url('../fonts/NetflixSansThin.ttf') format("truetype");
 }
+
+body{
+  margin: 0;
+}
+nav, .page-footer, .navbar-fixed{
+  height: 120px;
+  background-color: black;
+}
+#logo {
+  font-size: 36px;
+  font-family: NetflixBold;
+  color: #E90914;
+  position: fixed;
+  list-style-type: none;
+  margin: 30px 0 0 0;
+  padding-left: 134px;
+}
+section{
+  height: 754px;
+}
+#side-menu{
+  float: left;
+  height: 754px;
+  width: 157px;
+  margin-left: 128px;
+  /* background-color: slategray; */
+}
+#icon_holder{
+  margin: 63px 0 0 7px;
+}
+#icon_holder > li{
+  margin: 0 0 10px 0;
+}
+#icon_holder > li:last-child{
+  margin: 280px 0 0 0;
+}
+#main-section{
+  height: 754px;
+  margin: 0 128px 0 128px;
+  /* background-color: gray; */
+}
+#calendar{
+  float:left;
+  margin: 63px 0 0 0;
+}
+#search-bar{
+  float: right;
+  margin: 63px 0 0 0;
+}
+.charts > img{
+  height: 130px;
+  width: 200px;
+  margin: 185px 60px 0 -50px;
+}
+#user-table-container{
+  float: left;
+  margin: 80px 0 0 55px;
+}
+#footer-links{
+  margin: 30px 0 0 0;
+  padding-left: 134px;
+}
+#footer-links > li{
+  list-style-type: none;
+  font-size: 24px;
+  font-family: NetflixBold;
+  margin: 0 57px 0 0;
+}
+#footer-logo{
+  font-size: 36px;
+  font-family: NetflixBold;
+  color: #E90914;
+}
+#reserved{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
