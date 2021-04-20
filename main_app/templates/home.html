@@ -14,7 +14,8 @@
 </head>
 <body>
     <header class="navbar-fixed">
-    <nav>
+        <!-- SMALLER SIZED NAV -->
+    <nav id="small">
         <div class="nav-wrapper">
         <ul>
             <li id="logo">Reflix</li>
@@ -25,10 +26,19 @@
         </ul>
         </div>
     </nav>
+        <!-- BIGGER SIZED NAV -->
+    <nav id="large">
+        <div class="nav-wrapper">
+            <ul>
+                <li id="logo">TEST</li>
+            </ul>
+            <ul class="right" id="icon_holder">
+                <li><i class="material-icons" id="search_icon">search</i></li>
+                <li><i class="material-icons" id="menu_icon">menu</i></li>
+            </ul>
+        </div>
+    </nav>
     </header>
-    
-    
-<body>
     <div id="c1">
         <div id="blurb">Reflix is a place to watch recaps. Sign up so you never miss a new release.</div>
         <form id="form" action="/signup/" method="post">
@@ -37,19 +47,146 @@
             <input name='name'>
             <div class="label">Email</div>
             <input name='email' type="email">
-            <input id="button" type="submit" class="btn" value="Sign Up">
+            <button id="button" type="submit"> Sign Up </button>
         </form>
         {% if message %}
             <div> {{message}} </div>
         {% endif %}
     </div>
-    <div id="c2"></div>
-    <div id="c3"></div>
+    <div id="c2">
+        <div class="carousel_text">Most Popular Recaps</div>
+        <div class="carousel">
+            <a class="carousel-item">
+                <img src="https://i.imgur.com/7LnNnax.png">
+                <div class="carousel_info">House of Cards</div>
+                <div class="carousel_info">S5 E7: "Terror Alert"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </a>
+            <a class="carousel-item">
+                <img src="https://i.imgur.com/TYwWBYr.png">
+                <div class="carousel_info">Ozard</div>
+                <div class="carousel_info">"My Dripping Sleep"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </a>
+            <a class="carousel-item">
+                <img src="https://i.imgur.com/BTjdjkq.png">
+                <div class="carousel_info">Ginny & Georgia</div>
+                <div class="carousel_info">"Boo, Bitch"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </a>
+            <a class="carousel-item">
+                <img src="https://i.imgur.com/RQoPiK8.png">
+                <div class="carousel_info">Sherlock</div>
+                <div class="carousel_info">"The Hounds of Baskerville"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="c3">
+        <div class="carousel_text">New Releases</div>
+        <div class="carousel">
+            <a class="carousel-item">
+                <img src="https://i.imgur.com/8VnNPP8.png">
+                <div class="carousel_info">Bridgerton</div>
+                <div class="carousel_info">"After the Rain"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" ></button>
+                        <button class="clipstar" ></button>
+                    </form>
+                </div>
+            </a>
+            <a class="carousel-item">
+                <img src="https://i.imgur.com/45wfN7a.png">
+                <div class="carousel_info">The Serpent</div>
+                <div class="carousel_info">"Episode 5"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </a>
+            <a class="carousel-item">
+                <img src="https://i.imgur.com/ZVOrWZZ.png">
+                <div class="carousel_info">The Circle</div>
+                <div class="carousel_info">"Planting Doubt"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </a>
+            <a class="carousel-item">
+                <img src="https://i.imgur.com/FEGngFp.png">
+                <div class="carousel_info">Who Killed Sara?</div>
+                <div class="carousel_info">"Two Graves"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </a>
+        </div>
+    </div>
 </body>
 <footer class="page-footer">
-    <div class="right">All Rights Reserved, &copy; 2021 SpaceCrafts &nbsp;</div>
-  </footer>
+    <div>Copyright Reflix 2021</div>
+</footer>
 
-
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {
+            numVisible : 4,
+        });
+    });
+</script>
 
 </html>
