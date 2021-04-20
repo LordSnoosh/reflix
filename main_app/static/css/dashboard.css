@@ -38,7 +38,7 @@ body{
   margin: 0;
 }
 nav, .page-footer, .navbar-fixed{
-  height: 120px;
+  height: 97px;
   background-color: black;
 }
 #logo {
@@ -47,67 +47,162 @@ nav, .page-footer, .navbar-fixed{
   color: #E90914;
   position: fixed;
   list-style-type: none;
-  margin: 30px 0 0 0;
+  margin: 20px 0 0 0;
   padding-left: 134px;
 }
+#profile-pic > img{
+  margin: 30px 17px 0 0;
+  height: 49px;
+  width: 49px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+#admin-name{
+  margin: 22px 128px 0 0;
+  font-size: 16px;
+  font-family: NetflixLight;
+}
 section{
-  height: 754px;
+  height: 828px;
+  background-color: #F3F3F3;
 }
 #side-menu{
   float: left;
   height: 754px;
   width: 157px;
   margin-left: 128px;
-  /* background-color: slategray; */
 }
 #icon_holder{
-  margin: 63px 0 0 7px;
+  margin: 63px 0 0 0;
 }
 #icon_holder > li{
-  margin: 0 0 10px 0;
+  margin: 0 0 3px 0;
+  padding: 7px;
 }
-#icon_holder > li:last-child{
-  margin: 280px 0 0 0;
+#icon_holder > li:hover{
+  background-color:#C4C4C4;
+  cursor: pointer;
+}
+p{
+  margin: -28px 0 0 36px;
+  font-family: NetflixLight;
+  font-size: 16px;
+}
+#icon_holder_2{
+  margin: 300px 0 0 0;
+}
+#icon_holder_2 > li{
+  margin: 0 0 3px 0;
+  padding: 7px;
+}
+#icon_holder_2 > li:hover{
+  background-color:#C4C4C4;
+  cursor: pointer;
 }
 #main-section{
   height: 754px;
   margin: 0 128px 0 128px;
-  /* background-color: gray; */
-}
-#calendar{
-  float:left;
-  margin: 63px 0 0 0;
 }
 #search-bar{
   float: right;
   margin: 63px 0 0 0;
 }
-.charts > img{
+#search-box{
+  height: 29px;
+  width: 240px;
+  background-color: #F0F0F0;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+  margin: 0 -29px 0 0;
+  padding: 0 0 0 10px;
+}
+
+#search_icon:hover{
+  cursor: pointer;
+}
+#calendar{
+  float: right;
+  margin: 63px 19px 0 0;
+  background-color: #F0F0F0;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+  padding: 5px 20px 0px 20px;
+  height: 33px;
+  display: flex;
+}
+#calendar:hover{
+  cursor: pointer;
+}
+#bar, #line, #area {
+  float: left;
+  display: flex;
+  width: 271px;
   height: 130px;
-  width: 200px;
-  margin: 185px 60px 0 -50px;
+  margin: 114px 0 0 0;
+}
+#bar{
+  margin: 200px 0 0 27px;
+}
+#line{
+  margin: 114px 0 0 0;
+}
+#area{
+  margin: 103px 0 0 27px;
+}
+#bar:hover, #line:hover, #area:hover {
+  cursor: zoom-in;
+}
+.row::after {
+  flex: 33.33%;
+  padding: 5px;
 }
 #user-table-container{
   float: left;
   margin: 80px 0 0 55px;
+  width: 800px;
 }
-#footer-links{
-  margin: 30px 0 0 0;
-  padding-left: 134px;
+#user-table{
+  table-layout: auto;
+  font-family: 'NetflixRegular';
+  font-size: 16px;
+  color: #000000;
+  margin: -450px 0 0 150px;
 }
-#footer-links > li{
-  list-style-type: none;
-  font-size: 24px;
-  font-family: NetflixBold;
-  margin: 0 57px 0 0;
+#checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#checkbox{
+  cursor: pointer;
+}
+#scrollbar{
+  float: right;
+  margin: -398px -163px 0 0;
+}
+#scrollbar:hover{
+  cursor: pointer
+}
+.page-footer-2, .navbar-fixed-2{
+  height: 69px;
+  background-color: black;
 }
 #footer-logo{
+  list-style-type: none;
   font-size: 36px;
   font-family: NetflixBold;
   color: #E90914;
+  margin: -15px 0 0 0;
+  padding-left: 134px;
 }
 #reserved{
   position: absolute;
-  bottom: 0;
-  left: 0;
+  text-align: center;
+  width: 100%;
+  margin: 22px 0 0 5px;
+}
+@media only screen and (max-width: 993px){
+  #user-table{
+    width: 400px;
+  }
 }
