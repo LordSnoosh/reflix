@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
 </head>
 <body>
     <header class="navbar-fixed">
@@ -30,11 +31,13 @@
     <nav id="large">
         <div class="nav-wrapper">
             <ul>
-                <li id="logo">TEST</li>
+                <li id="logo">Reflix</li>
+                <li id="fake"><i class="material-icons" id="fake_icon">search</i></li>
             </ul>
             <ul class="right" id="icon_holder">
-                <li><i class="material-icons" id="search_icon">search</i></li>
-                <li><i class="material-icons" id="menu_icon">menu</i></li>
+                <li>Categories</li>
+                <li>About</li>
+                <button id="button" type="submit"> Sign In </button>
             </ul>
         </div>
     </nav>
@@ -47,14 +50,22 @@
             <input name='name'>
             <div class="label">Email</div>
             <input name='email' type="email">
-            <button id="button" type="submit"> Sign Up </button>
+            <div class="small_submit">
+                <button id="button" type="submit"> Sign Up </button>
+                {% if message %}
+                <div id="submit_message"> {{message}} </div>
+                {% endif %}
+            </div>
+            <div class="large_submit">
+                {% if message %}
+                <div id="submit_message"> {{message}} </div>
+                {% endif %}
+                <button id="button" type="submit"> Sign Up </button>
+            </div>
         </form>
-        {% if message %}
-            <div> {{message}} </div>
-        {% endif %}
     </div>
     <div id="c2">
-        <div class="carousel_text">Most Popular Recaps</div>
+        <div class="carousel_text">Most Popular</div>
         <div class="carousel">
             <a class="carousel-item">
                 <img src="https://i.imgur.com/7LnNnax.png">
@@ -72,7 +83,7 @@
             </a>
             <a class="carousel-item">
                 <img src="https://i.imgur.com/TYwWBYr.png">
-                <div class="carousel_info">Ozard</div>
+                <div class="carousel_info">Ozark</div>
                 <div class="carousel_info">"My Dripping Sleep"</div>
                 <div>
                     <form>
@@ -175,18 +186,296 @@
             </a>
         </div>
     </div>
+    <div class="glider-contain" id="c2c2">
+        <div id="glider_text">Most Popular</div>
+        <div class="glider">
+            <div>
+                <img src="https://i.imgur.com/7LnNnax.png">
+                <div class="carousel_info">House of Cards</div>
+                <div class="carousel_info">S5 E7: "Terror Alert"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/TYwWBYr.png">
+                <div class="carousel_info">Ozard</div>
+                <div class="carousel_info">"My Dripping Sleep"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/BTjdjkq.png">
+                <div class="carousel_info">Ginny & Georgia</div>
+                <div class="carousel_info">"Boo, Bitch"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/RQoPiK8.png">
+                <div class="carousel_info">Sherlock</div>
+                <div class="carousel_info">"The Hounds of Baskerville"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/7LnNnax.png">
+                <div class="carousel_info">House of Cards</div>
+                <div class="carousel_info">S5 E7: "Terror Alert"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/TYwWBYr.png">
+                <div class="carousel_info">Ozark</div>
+                <div class="carousel_info">"My Dripping Sleep"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/BTjdjkq.png">
+                <div class="carousel_info">Ginny & Georgia</div>
+                <div class="carousel_info">"Boo, Bitch"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/RQoPiK8.png">
+                <div class="carousel_info">Sherlock</div>
+                <div class="carousel_info">"The Hounds of Baskerville"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div role="tablist" class="dots"></div>
+    </div>
+    <div class="glider-contain" id="c3c3">
+        <div id="glider_text">New Releases</div>
+        <div class="glider2">
+            <div>
+                <img src="https://i.imgur.com/8VnNPP8.png">
+                <div class="carousel_info">Bridgerton</div>
+                <div class="carousel_info">"After the Rain"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/45wfN7a.png">
+                <div class="carousel_info">The Serpent</div>
+                <div class="carousel_info">"Episode 5"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/ZVOrWZZ.png">
+                <div class="carousel_info">The Circle</div>
+                <div class="carousel_info">"Planting Doubt"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/FEGngFp.png">
+                <div class="carousel_info">Who Killed Sara?</div>
+                <div class="carousel_info">"Two Graves"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/7LnNnax.png">
+                <div class="carousel_info">House of Cards</div>
+                <div class="carousel_info">S5 E7: "Terror Alert"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/TYwWBYr.png">
+                <div class="carousel_info">Ozard</div>
+                <div class="carousel_info">"My Dripping Sleep"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/BTjdjkq.png">
+                <div class="carousel_info">Ginny & Georgia</div>
+                <div class="carousel_info">"Boo, Bitch"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <img src="https://i.imgur.com/RQoPiK8.png">
+                <div class="carousel_info">Sherlock</div>
+                <div class="carousel_info">"The Hounds of Baskerville"</div>
+                <div>
+                    <form>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar" style="background-color: #B20710;"></button>
+                        <button class="clipstar"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div role="tablist" class="dots2"></div>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 </body>
-<footer class="page-footer">
-    <div>Copyright Reflix 2021</div>
+<footer class="page-footer" >
+    <div id="small_footer">
+        <div>
+            <div>About</div>   
+            <div>Contact</div>   
+            <div>Help</div>   
+            <div>Account</div>   
+        </div>
+        <div>
+            <div>Privacy</div>
+            <div>Terms of Use</div>
+            <div>Copyright Reflix 2021</div>
+        </div>
+    </div>
+    <div id="large_footer">
+        <div>
+            <div id="footer_logo">Reflix</div>
+            <div>Contact</div>
+            <div>Help</div>
+            <div>Account</div>
+            <div>About</div>
+            <div>Privacy</div>
+            <div>Terms of Use</div>
+        </div>
+        <div id="cp">Copyright Reflix 2021</div>
+    </div>   
 </footer>
 
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems, {
-            numVisible : 4,
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {
+        numVisible : 4,
     });
+});
+
+new Glider(document.querySelector('.glider'), {
+    slidesToShow: 4,
+    slidesToScroll: 5,
+    draggable: true,
+    dots: '.dots',
+});
+
+new Glider(document.querySelector('.glider2'), {
+    slidesToShow: 4,
+    slidesToScroll: 5,
+    draggable: true,
+    dots: '.dots2',
+});
+
 </script>
 
 </html>
