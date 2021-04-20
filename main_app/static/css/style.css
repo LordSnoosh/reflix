@@ -36,6 +36,15 @@
 
 body{
     margin: 0;
+    background-color: #C4C4C4;
+}
+
+#small {
+    display: inline;
+}
+
+#large {
+    display: none;
 }
 
 nav, .page-footer, .navbar-fixed{
@@ -43,24 +52,32 @@ nav, .page-footer, .navbar-fixed{
     background-color: black;
 }
 
+.page-footer{
+    margin-top: 1px;
+}
+
+.page-footer > div{
+    margin-top: 4px;
+    text-align: center;
+    font-family: NetflixLight;
+    font-size: 16px;
+}
+
 #c1 {
     height: 416px;
-    background-color: pink;
-    background-image: url("https://i.imgur.com/XcVOeXk.png");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://i.imgur.com/XcVOeXk.png");
+    background-color: black;
     background-position: 35% 90%;
     background-size: 220%;
 
 }
 
-#c2 {
+#c2, #c3 {
     height: 338px;
-    background-color:  blue;    
+    background-color: black;   
+    padding: 16px; 
 }
 
-#c3 {
-    height: 338px;
-    background-color: red;
-}
 
 #search_icon, #menu_icon {
     font-size: 40px;
@@ -87,7 +104,7 @@ nav {
 }
 
 .label {
-    margin: 16px 0px 0px 32px;
+    margin: 10px 0px 0px 32px;
     font-size: 16px;
     font-family: NetflixLight;
     color: white
@@ -96,17 +113,52 @@ nav {
 #blurb {
     font-size: 24px;
     margin: 0px 16px 0px 16px;
+    padding-top: 40px;
     font-family: NetflixLight;
     color: white;
 }
 
-#form > #button {
+#form > button {
+    border-radius: 20px;
     background-color: #E90914;
     color: white;
-    width: 84px;
+    width: 88px;
     margin-top: 16px;
-    font-family: NetflixBold;
+    font-family: NetflixRegular;
     text-align: center;
+    font-size: 18px;
+    margin-left: 16px;
+    height: 40px;
+    border:1px solid #E90914; 
+}
+
+.carousel_text {
+    color: white;
+    font-size: 16px;
+    font-family: NetflixLight;
+    margin-bottom: 16px;
+}
+
+.carousel {
+    height: 300px;
+}
+
+.carousel > a {
+    margin-top:-50px;
+}
+
+.carousel_info {
+    color: white;
+    font-family: NetflixLight;
+}
+
+.clipstar {
+  background:RGB(242, 228, 162);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background:#C4C4C4;
 }
 
 @media only screen and (min-width: 769px) {
@@ -121,19 +173,20 @@ nav {
     
     #c1{
         height: 620px;
-        background-color: pink;
         margin:0;
-        background-size: 105%;
+        background-size: cover;
     }
     
-    #c2{
-        height: 311px;
-        background-color:  blue;    
+    #c2, #c3{
+        height: 311px;  
     }
-    
-    #c3{
-        height: 311px;
-        background-color: red;
+
+    #small {
+        display: none;
+    }
+
+    #large {
+        display: inline;
     }
 
 }
